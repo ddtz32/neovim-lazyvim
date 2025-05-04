@@ -10,10 +10,5 @@ return {
         border = vim.g.user.border,
       },
     },
-    servers = {
-      clangd = {
-        mason = false,
-      },
-    },
   },
 }

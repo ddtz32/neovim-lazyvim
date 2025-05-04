@@ -6,4 +6,4 @@
 vim.keymap.del("n", "<leader>uz")
 vim.keymap.del("n", "<leader>uZ")
 Snacks.toggle.zen():map("<leader>z")
-Snacks.toggle.zoom():map("<leader>wm"):map("<leader>Z")
+Snacks.toggle.zoom():map("<leader>Z")
