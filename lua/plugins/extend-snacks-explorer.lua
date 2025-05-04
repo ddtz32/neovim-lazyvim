@@ -39,7 +39,9 @@ return {
       sources = {
         explorer = {
           include = {
-            "build*",
+            "build",
+            ".vscode",
+            "launch.json",
           },
         },
       },

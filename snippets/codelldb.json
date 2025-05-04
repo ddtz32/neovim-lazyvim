@@ -1,0 +1,28 @@
+{
+  "CodeLLDB Launch": {
+    "prefix": "codelldb launch",
+    "description": "CodeLLDB: Launch",
+    "body": [
+      "{",
+      "  \"type\": \"codelldb\",",
+      "  \"request\": \"launch\",",
+      "  \"name\": \"${1:name}\",",
+      "  \"program\": \"\\${workspaceFolder}/${2:<program>}\",",
+      "  \"args\": [${3}],",
+      "  \"cwd\": \"\\${workspaceFolder}\"",
+      "},"
+    ]
+  },
+  "CodeLLDB Attach": {
+    "prefix": "codelldb attach",
+    "description": "CodeLLDB: Attach",
+    "body": [
+      "{",
+      "  \"type\": \"codelldb\",",
+      "  \"request\": \"attach\",",
+      "  \"name\": \"${1:Attach}\",",
+      "  \"program\": \"\\${2:<program>}\",",
+      "},"
+    ]
+  }
+}
