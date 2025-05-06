@@ -34,6 +34,7 @@ return {
     },
   },
   opts = {
+    scroll = { enabled = false },
     picker = {
       sources = {
         explorer = {
