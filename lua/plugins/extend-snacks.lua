@@ -4,17 +4,17 @@ return {
     {
       "<leader>e",
       function()
-        ---@diagnostic disable-next-line: missing-fields
-        Snacks.explorer({ cwd = LazyVim.root() })
+        Snacks.explorer()
       end,
-      desc = "Explorer Snacks (root dir)",
+      desc = "Explorer Snacks (cwd)",
     },
     {
       "<leader>E",
       function()
-        Snacks.explorer()
+        ---@diagnostic disable-next-line: missing-fields
+        Snacks.explorer({ cwd = LazyVim.root() })
       end,
-      desc = "Explorer Snacks (cwd)",
+      desc = "Explorer Snacks (root dir)",
     },
     { "<leader>fe", false },
     { "<leader>fE", false },
