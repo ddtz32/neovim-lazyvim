@@ -27,11 +27,21 @@ return {
         desc = "Toggle Breakpoint",
       },
       {
-        "<leader>dB",
+        "<leader>dc",
         function()
-          require("persistent-breakpoints.api").set_breakpoint(vim.fn.input("Breakpoint condition: "))
+          -- use ${MI.dump(), true} to execute dump function automatically,
+          -- since in log point, we can only print value of variable
+          require("persistent-breakpoints.api").set_conditional_breakpoint()
         end,
-        desc = "Breakpoint Condition",
+        desc = "breakpoint condition",
+      },
+      {
+        "<leader>dm",
+        function()
+          -- use {var} to print value of variable named var
+          require("persistent-breakpoints.api").set_log_point()
+        end,
+        desc = "breakpoint message",
       },
       { "<F5>", function() require("dap").continue() end, desc = "Run/Continue" },
       { "<F9>", function() require("dap").run_to_cursor() end, desc = "Run to Cursor" },
