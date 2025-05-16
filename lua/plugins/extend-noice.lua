@@ -14,6 +14,12 @@ return {
           },
         },
       },
+      command_palette = {
+        views = {
+          cmdline_popup = { border = { style = vim.g.user.border } },
+          cmdline_popupmenu = { border = { style = vim.g.user.border } },
+        },
+      },
     },
   },
 }
