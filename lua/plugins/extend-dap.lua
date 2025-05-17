@@ -1,13 +1,18 @@
 return {
   {
-    "Weissle/persistent-breakpoints.nvim",
-    dependencies = { "mfussenegger/nvim-dap" },
-    event = "BufReadPost",
-    opts = {
-      load_breakpoints_event = "BufReadPost",
+    "rcarriga/nvim-dap-ui",
+    keys = {
+      { "<leader>du", false },
+      { "<leader>du", function() require("dapui").toggle({ reset = true }) end, desc = "Dap UI" },
+      { "<leader>dU", function() require("dapui").open({ reset = true }) end, desc = "Reset Dap UI" },
     },
   },
-  -- stylua: ignore
+  {
+    "Weissle/persistent-breakpoints.nvim",
+    dependencies = "mfussenegger/nvim-dap",
+    event = "BufReadPost",
+    opts = { load_breakpoints_event = "BufReadPost" },
+  },
   {
     "mfussenegger/nvim-dap",
     keys = {
@@ -21,9 +26,7 @@ return {
 
       {
         "<leader>db",
-        function()
-          require("persistent-breakpoints.api").toggle_breakpoint()
-        end,
+        function() require("persistent-breakpoints.api").toggle_breakpoint() end,
         desc = "Toggle Breakpoint",
       },
       {
