@@ -6,11 +6,10 @@ return {
         views = {
           hover = {
             size = {
-              max_height = 10,
+              max_height = math.floor(vim.g.user.height * vim.o.lines / 2),
+              max_width = math.floor(vim.g.user.width * vim.o.columns),
             },
-            border = {
-              style = vim.g.user.border,
-            },
+            border = { style = vim.g.user.border },
           },
         },
       },
