@@ -1,5 +1,14 @@
 return {
   "folke/snacks.nvim",
+  keys = {
+    { "<leader>sg", false },
+
+    {
+      "<leader>sg",
+      function() LazyVim.pick("grep", { cwd = vim.fn.expand("%:p:h") })() end,
+      desc = "Grep (Directory of Current File)",
+    },
+  },
   opts = {
     ---@module "snacks.picker"
     ---@type snacks.picker.Config
