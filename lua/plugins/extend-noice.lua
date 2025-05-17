@@ -20,5 +20,14 @@ return {
         },
       },
     },
+    views = {
+      popup = {
+        border = vim.g.user.border,
+        size = {
+          width = vim.g.user.width,
+          height = vim.g.user.height,
+        },
+      },
+    },
   },
 }
