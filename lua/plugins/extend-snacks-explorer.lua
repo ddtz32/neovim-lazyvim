@@ -1,21 +1,9 @@
 return {
   "folke/snacks.nvim",
   keys = {
-    {
-      "<leader>e",
-      function()
-        Snacks.explorer()
-      end,
-      desc = "Explorer Snacks (cwd)",
-    },
-    {
-      "<leader>E",
-      function()
-        ---@diagnostic disable-next-line: missing-fields
-        Snacks.explorer({ cwd = LazyVim.root() })
-      end,
-      desc = "Explorer Snacks (root dir)",
-    },
+    { "<leader>e", function() Snacks.explorer() end, desc = "Explorer Snacks (cwd)" },
+    ---@diagnostic disable-next-line: missing-fields
+    { "<leader>E", function() Snacks.explorer({ cwd = LazyVim.root() }) end, desc = "Explorer Snacks (root dir)" },
     { "<leader>fe", false },
     { "<leader>fE", false },
     {
@@ -41,6 +29,7 @@ return {
             "build",
             ".vscode",
             "launch.json",
+            ".clangd",
           },
         },
       },
