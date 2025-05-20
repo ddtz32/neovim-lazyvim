@@ -8,6 +8,17 @@ return {
       function() LazyVim.pick("grep", { cwd = vim.fn.expand("%:p:h") })() end,
       desc = "Grep (Directory of Current File)",
     },
+    {
+      "<leader>bl",
+      function()
+        Snacks.picker.buffers({
+          focus = "list",
+          ---@diagnostic disable-next-line: assign-type-mismatch
+          layout = { preset = "sidebar", layout = { position = "right" }, preview = false },
+        })
+      end,
+      desc = "Buffers",
+    },
   },
   opts = {
     ---@module "snacks.picker"
