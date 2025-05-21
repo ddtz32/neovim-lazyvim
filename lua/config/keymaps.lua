@@ -5,8 +5,8 @@
 -- windows
 vim.keymap.del("n", "<leader>uz")
 vim.keymap.del("n", "<leader>uZ")
-Snacks.toggle.zen():map("<leader>z")
-Snacks.toggle.zoom():map("<leader>Z")
+Snacks.toggle.zoom():map("<leader>z")
+Snacks.toggle.zen():map("<leader>Z")
 
 -- floating terminal
 vim.keymap.del("n", "<leader>ft")
