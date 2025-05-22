@@ -74,7 +74,7 @@ return {
     picker = {
       sources = {
         explorer = {
-          layout = "sidebar_with_changed_border",
+          layout = { preset = "sidebar_with_changed_border", preview = false },
           include = {
             "build",
             ".vscode",
