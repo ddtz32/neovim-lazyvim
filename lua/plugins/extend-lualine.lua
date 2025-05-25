@@ -1,8 +1,13 @@
 return {
   "nvim-lualine/lualine.nvim",
   opts = {
+    options = {
+      section_separators = { left = "", right = "" },
+      component_separators = "",
+    },
     sections = {
       -- copied from lazyvim, then add customized configuration
+      lualine_a = { { "mode", separator = { left = "" } } },
       lualine_c = {
         LazyVim.lualine.root_dir(),
         {
@@ -18,8 +23,8 @@ return {
       },
       lualine_y = { "filetype" },
       lualine_z = {
-        { "progress", separator = " ", padding = { left = 1, right = 0 } },
-        { "location", padding = { left = 0, right = 1 } },
+        { "progress", separator = { left = "" } },
+        { "location", separator = { right = "" } },
       },
     },
   },
