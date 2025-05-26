@@ -8,6 +8,7 @@ return {
     sections = {
       -- copied from lazyvim, then add customized configuration
       lualine_a = { { "mode", separator = { left = "" } } },
+      lualine_b = { { "branch", draw_empty = true } },
       lualine_c = {
         LazyVim.lualine.root_dir(),
         {
@@ -21,7 +22,7 @@ return {
         },
         { LazyVim.lualine.pretty_path({ length = 0 }) },
       },
-      lualine_y = { "filetype" },
+      lualine_y = { { "filetype", draw_empty = true } },
       lualine_z = {
         { "progress", separator = { left = "" } },
         { "location", separator = { right = "" } },
