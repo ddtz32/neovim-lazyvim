@@ -3,6 +3,12 @@ return {
     "rcarriga/nvim-dap-ui",
     keys = {
       { "<leader>du", false },
+      { "<leader>dr", false },
+      {
+        "<leader>dr",
+        function() require("dapui").toggle({ layout = 2, reset = true }) end,
+        desc = "Toggle REPL and Console",
+      },
       { "<leader>du", function() require("dapui").toggle({ reset = true }) end, desc = "Dap UI" },
       { "<leader>dU", function() require("dapui").open({ reset = true }) end, desc = "Reset Dap UI" },
     },
@@ -36,7 +42,7 @@ return {
           -- since in log point, we can only print value of variable
           require("persistent-breakpoints.api").set_conditional_breakpoint()
         end,
-        desc = "breakpoint condition",
+        desc = "Set Breakpoint Condition",
       },
       {
         "<leader>dm",
@@ -44,7 +50,7 @@ return {
           -- use {var} to print value of variable named var
           require("persistent-breakpoints.api").set_log_point()
         end,
-        desc = "breakpoint message",
+        desc = "Set Breakpoint Message",
       },
       { "<F5>", function() require("dap").continue() end, desc = "Run/Continue" },
       { "<F9>", function() require("dap").run_to_cursor() end, desc = "Run to Cursor" },
