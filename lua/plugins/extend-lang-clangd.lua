@@ -8,6 +8,7 @@ return {
         },
         extension = {
           ["inc"] = "cpp",
+          ["def"] = "cpp",
         },
       })
     end,

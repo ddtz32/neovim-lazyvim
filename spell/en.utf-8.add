@@ -6,3 +6,7 @@ tmux
 zsh
 lazyvim
 dotfile
+backend
+llvm
+cmake
+tablegen
